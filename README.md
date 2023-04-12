@@ -41,3 +41,9 @@ article:https://www.djamware.com/post/585efdd480aca7486e42ffc7grails-3-and-mongo
 	generate-all com.bookstore.Book
 
 6. To run the back-end, grails run-app
+
+
+problem encountered:
+1. mongodb tries to create an instance in data/db but apple stop giving write access, so we create a new folder and let mongodb stores into that folder. using this code.
+	mongod --dbpath=/Users/gary/data/db
+2. Version of the tools, grails 3 only works with java 8 and below, and with mongodb 4.24 and below.
